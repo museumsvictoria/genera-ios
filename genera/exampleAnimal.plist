@@ -1,0 +1,195 @@
+{
+	groupList = (
+		{
+			highlightedImage = "animalActive_05_insects@2x.png";
+			standardImage = "animal_05_insects@2x.png";
+			label = "Crawly Things with 6 legs";
+			order = 1;
+		},
+		{
+			highlightedImage = "animalActive_04_frogs@2x.png";
+			standardImage = "animal_04_frogs@2x.png";
+			label = Frogs;
+			order = 2;
+		},
+		{
+			highlightedImage = "animalActive_01_birds@2x.png";
+			standardImage = "animal_01_birds@2x.png";
+			label = Birds;
+			order = 3;
+		},
+		{
+			highlightedImage = "animalActive_03_freshInvertebrates@2x.png";
+			standardImage = "animal_03_freshInvertebrates@2x.png";
+			label = "Freshwater Invertebrates";
+			order = 41;
+		},
+		{
+			highlightedImage = "animalActive_10_spiders@2x.png";
+			standardImage = "animal_10_spiders@2x.png";
+			label = "Creepy Things With 8 legs";
+			order = 5;
+		},
+		{
+			highlightedImage = "animalActive_02_butterflies@2x.png";
+			standardImage = "animal_02_butterflies@2x.png";
+			label = Butterflies;
+			order = 6;
+		},
+		{
+			highlightedImage = "animalActive_06_lizards@2x.png";
+			standardImage = "animal_06_lizards@2x.png";
+			label = Lizards;
+			order = 7;
+		},
+		{
+			highlightedImage = "animalActive_07_mammals@2x.png";
+			standardImage = "animal_07_mammals@2x.png";
+			label = Mammals;
+			order = 8;
+		},
+		{
+			highlightedImage = "animalActive_11_terrestrialInvertebrates@2x.png";
+			standardImage = "animal_11_terrestrialInvertebrates@2x.png";
+			label = "Terrestrial Invertebrates";
+			order = 9;
+		},
+		{
+			highlightedImage = "animalActive_09_snakes@2x.png";
+			standardImage = "animal_09_snakes@2x.png";
+			label = Snakes;
+			order = 10;
+		},
+		{
+			highlightedImage = "animalActive_08_marineInvertebrates@2x.png";
+			standardImage = "animal_08_marineInvertebrates@2x.png";
+			label = "Marine Invertebrates";
+			order = 11;
+		},
+		{
+			highlightedImage = "animalActive_12_fishes@2x.png";
+			standardImage = "animal_12_fishes@2x.png";
+			label = Fishes;
+			order = 12;
+		},
+	);
+	templateList = (
+		{
+			templateName = animal;
+			tabletTemplate = "iPadTemplate.html";
+			mobileTabs = (
+				{
+					tabName = images;
+				},
+				{
+					tabName = details;
+				},
+				{
+					tabName = distribution;
+					tabLabel = Distribution;
+					tabIcon = "tabBar2_distribution.png";
+				},
+				{
+					tabName = scarcity;
+					tabLabel = Scarcity;
+					tabIcon = "tabBar2_scarcity.png";
+				},
+				{
+					tabName = audio;
+				},
+			);
+		},
+	);
+	objectData = (
+		{
+			identifier = 290931;
+			template = animal;
+			label = "Southern Bell Frog";
+			labelStyle = bold;
+			sublabel = "Litoria raniformis";
+			sublabelStyle = italic;
+			searchText = "Southern Bell Frog Growling Grass Frog Warty Bell Frog Litoria raniformis";
+			audioFiles = (
+				{
+					credit = "Simon Sherrin";
+					filename = "bloop.mp3";
+					audioDescription = "Mating call of the male";
+				},
+			);
+			images = (
+				{
+					credit = "Simon Sherrin";
+					filename = "growlgrass1.jpg";
+					imageDescription = "Male Southern Bell Frog";
+				},
+			);
+			squareThumbnail = (
+				{
+					filename = "frogsquare.jpg";
+				},
+			);
+			group = Frogs;
+			subgroup = "Tree frogs";
+			details = {
+				biology = "Southern Bell Frogs produce a secretion through glands in the skin which can have a toxic effect on other animals, and can cause skin irritation in humans. Females can be 4 cm larger than the males.";
+				class = Amphibia;
+				commonNames = "Growling Grass Frog, Warty Bell Frog";
+				diet = Insects;
+				distinctive = "Calling sound.";
+				distribution = "Tasmania and throughout Victoria.";
+				family = Hylidae;
+				genus = Litoria;
+				habitat = "Near water in woodland and shrubland areas.";
+				"identifyingCharacteristics" = "Body bright green with golden coloured patches on the back, and a pale stripe along the middle of the back. Back covered in wart lumps. Groin and legs with purple-pink patches. Up to 11 cm long.";
+				lcs = Threatened;
+				mapImage = "394126.jpg";
+				nativeStatus = "Native to Australia";
+				ncs = Endangered;
+				order = Anura;
+				phylum = Chordata;
+				species = raniformis;
+				wcs = Vulnerable;
+			};
+		},
+		{
+			identifier = 103785;
+			template = animal;
+			label = Kookaburra;
+			labelStyle = bold;
+			sublabel = "Dacelo novaeguineae";
+			sublabelStyle = italic;
+			searchText = "Kookaburra Dacelo novaeguineae HaHa bird";
+			images = (
+				{
+					credit = "Simon Sherrin";
+					filename = "kooka.jpg";
+					imageDesctiption = "HaHa Bird";
+				},
+			);
+			squareThumbnail = "kookasquare.jpg";
+			details = {
+				biology = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum diam velit, vel dignissim ligula. Pellentesque non nisl ligula, ac hendrerit eros. Morbi vehicula mi at massa vestibulum vel egestas neque sagittis. Aliquam tempus lectus in turpis lacinia sit amet semper turpis pellentesque. Fusce cursus libero at tortor sollicitudin eu ornare nisi faucibus. Vivamus eget nibh eget nisl mollis dignissim molestie et arcu. Phasellus luctus arcu in leo volutpat nec semper nibh vestibulum. Pellentesque nec sapien laoreet augue pretium feugiat. Vivamus commodo ipsum commodo nulla aliquet eu aliquam massa tristique. Vestibulum dictum dapibus purus, egestas convallis velit tempor quis. Sed a ipsum dui. Suspendisse urna ante, auctor ac hendrerit ut, consectetur nec lacus. Proin egestas, orci at iaculis tincidunt, mauris erat porta ipsum, nec faucibus leo sem et libero. Proin porttitor convallis diam, a sagittis enim porta non. Aenean in auctor diam. Cras interdum purus pretium neque viverra lacinia aliquam mauris venenatis. Sed a nisl purus, nec consequat sem. ";
+				class = Ipsum;
+				commonNames = Kookaburra;
+				diet = Carnivore;
+				distinctive = "Morbi fermentum ultricies fermentum. Etiam vitae nisl accumsan urna dignissim fringilla eget vestibulum odio. Pellentesque eu justo ligula. Quisque non nulla vel sapien interdum tempus. Integer aliquet lectus sed orci. ";
+				distribution = "Worldwide. Throughout Australia, including across Victoria.";
+				family = Sit;
+				genus = Amet;
+				habitat = "Lorem Ipsum";
+				"identifyingCharacteristics" = "Small with Six Legs";
+				lcs = "Not Threatened";
+				mapImage = "394126.jpg";
+				nativeStatus = "Native to Australia";
+				ncs = "Not Listed";
+				order = Dolor;
+				phylum = Lorem;
+				species = consectetur;
+				taxonGroup = Birds;
+				taxonSubgroup = Kingfisher;
+				wcs = "Not Listed";
+			};
+		},
+	);
+	versionID = "1.2";
+}

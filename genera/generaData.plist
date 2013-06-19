@@ -1,0 +1,518 @@
+{
+	groupList = (
+		{
+			highlightedImage = "animalActive_05_insects@2x.png";
+			standardImage = "animal_05_insects@2x.png";
+			label = Rembrandt;
+			order = 1;
+		},
+		{
+			highlightedImage = "animalActive_04_frogs@2x.png";
+			standardImage = "animal_04_frogs@2x.png";
+			label = Frogs;
+			order = 2;
+		},
+		{
+			highlightedImage = "animalActive_01_birds@2x.png";
+			standardImage = "animal_01_birds@2x.png";
+			label = Birds;
+			order = 3;
+		},
+		{
+			highlightedImage = "animalActive_03_freshInvertebrates@2x.png";
+			standardImage = "animal_03_freshInvertebrates@2x.png";
+			label = "Still Life";
+			order = 4;
+		},
+	);
+	templateList = (
+		{
+			templateName = animal;
+			tabletTemplate = "template-ipad.html";
+			mobileTabs = (
+				{
+					tabName = images;
+				},
+				{
+					tabName = details;
+					tabLabel = Details;
+					tabIcon = "";
+					tabTemplate = "template-iphone-details.html";
+				},
+				{
+					tabName = distribution;
+					tabLabel = Distribution;
+					tabIcon = "tabBar2_distribution.png";
+					tabTemplate = "template-iphone-distribution.html";
+				},
+				{
+					tabName = scarcity;
+					tabLabel = Scarcity;
+					tabIcon = "tabBar2_scarcity.png";
+					tabTemplate = "template-iphone-scarcity.html";
+				},
+				{
+					tabName = audio;
+				},
+			);
+		},
+		{
+			templateName = artwork;
+			tabletTemplate = "artwork-template-ipad.html";
+			mobileTabs = (
+				{
+					tabName = images;
+				},
+				{
+					tabName = paintingdetails;
+					tabLabel = details;
+					tablIcon = "tabBar2_details.png";
+					tabTemplate = "iphone-artwork-details.html";
+				},
+			);
+		},
+	);
+	objectData = (
+		{
+			identifier = 290931;
+			template = animal;
+			label = "Southern Bell Frog";
+			labelStyle = bold;
+			sublabel = "Litoria raniformis";
+			sublabelStyle = italic;
+			searchText = "Southern Bell Frog Growling Grass Frog Warty Bell Frog Litoria raniformis";
+			audioFiles = (
+				{
+					credit = "Simon Sherrin";
+					filename = "bloop.mp3";
+					audioDescription = "Mating call of the male";
+				},
+			);
+			images = (
+				{
+					credit = "Simon Sherrin";
+					filename = "growlgrass1.jpg";
+					imageDescription = "Male Southern Bell Frog";
+				},
+			);
+			squareThumbnail = "frogsquare.jpg";
+			group = Frogs;
+			subgroup = "Tree frogs";
+			details = {
+				bite = "";
+				biology = "Southern Bell Frogs produce a secretion through glands in the skin which can have a toxic effect on other animals, and can cause skin irritation in humans. Females can be 4 cm larger than the males.";
+				class = Amphibia;
+				commonNames = "Growling Grass Frog, Warty Bell Frog";
+				diet = Insects;
+				distinctive = "Calling sound.";
+				distribution = "Tasmania and throughout Victoria.";
+				family = Hylidae;
+				genus = Litoria;
+				habitat = "Near water in woodland and shrubland areas.";
+				"identifyingCharacteristics" = "Body bright green with golden coloured patches on the back, and a pale stripe along the middle of the back. Back covered in wart lumps. Groin and legs with purple-pink patches. Up to 11 cm long.";
+				lcs = Threatened;
+				mapImage = "394126.jpg";
+				nativeStatus = "Native to Australia";
+				ncs = Endangered;
+				order = Anura;
+				phylum = Chordata;
+				species = raniformis;
+				wcs = Vulnerable;
+			};
+		},
+		{
+			subgroup = Kingfishers;
+			group = Birds;
+			identifier = 103785;
+			template = animal;
+			label = Kookaburra;
+			"New item" = "";
+			labelStyle = bold;
+			sublabel = "Dacelo novaeguineae";
+			sublabelStyle = italic;
+			searchText = "Kookaburra Dacelo novaeguineae HaHa bird";
+			images = (
+				{
+					credit = "Simon Sherrin";
+					filename = "kooka.jpg";
+					imageDescription = "HaHa Bird";
+				},
+			);
+			squareThumbnail = "kookasquare.jpg";
+			details = {
+				bite = "Can give you a nasty nip";
+				biology = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum diam velit, vel dignissim ligula. Pellentesque non nisl ligula, ac hendrerit eros. Morbi vehicula mi at massa vestibulum vel egestas neque sagittis. Aliquam tempus lectus in turpis lacinia sit amet semper turpis pellentesque. Fusce cursus libero at tortor sollicitudin eu ornare nisi faucibus. Vivamus eget nibh eget nisl mollis dignissim molestie et arcu. Phasellus luctus arcu in leo volutpat nec semper nibh vestibulum. Pellentesque nec sapien laoreet augue pretium feugiat. Vivamus commodo ipsum commodo nulla aliquet eu aliquam massa tristique. Vestibulum dictum dapibus purus, egestas convallis velit tempor quis. Sed a ipsum dui. Suspendisse urna ante, auctor ac hendrerit ut, consectetur nec lacus. Proin egestas, orci at iaculis tincidunt, mauris erat porta ipsum, nec faucibus leo sem et libero. Proin porttitor convallis diam, a sagittis enim porta non. Aenean in auctor diam. Cras interdum purus pretium neque viverra lacinia aliquam mauris venenatis. Sed a nisl purus, nec consequat sem. ";
+				class = Ipsum;
+				commonNames = Kookaburra;
+				diet = Carnivore;
+				distinctive = "Morbi fermentum ultricies fermentum. Etiam vitae nisl accumsan urna dignissim fringilla eget vestibulum odio. Pellentesque eu justo ligula. Quisque non nulla vel sapien interdum tempus. Integer aliquet lectus sed orci. ";
+				distribution = "Worldwide. Throughout Australia, including across Victoria.";
+				family = Sit;
+				genus = Amet;
+				habitat = "Lorem Ipsum";
+				"identifyingCharacteristics" = "Small with Six Legs";
+				lcs = "Not Threatened";
+				mapImage = "394126.jpg";
+				nativeStatus = "Native to Australia";
+				ncs = "Not Listed";
+				order = Dolor;
+				phylum = Lorem;
+				species = consectetur;
+				taxonGroup = Birds;
+				taxonSubgroup = Kingfisher;
+				wcs = "Not Listed";
+			};
+		},
+		{
+			subgroup = Portrait;
+			group = Rembrandt;
+			identifier = R;
+			template = artwork;
+			label = "Portrait of a Gentleman with a Tall Hat and Gloves";
+			labelStyle = bold;
+			sublabel = "c. 1658/1660";
+			sublabelStyle = italic;
+			searchText = "Rembrandt Gentleman Tall Hat Gloves";
+			images = (
+				{
+					credit = "Courtesy NGA";
+					filename = "A11981.jpg";
+					imageDescription = "Full Portrait";
+				},
+			);
+			squareThumbnail = "A11981-Thumb.jpg";
+			details = {
+				description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum diam velit, vel dignissim ligula. Pellentesque non nisl ligula, ac hendrerit eros. Morbi vehicula mi at massa vestibulum vel egestas neque sagittis. Aliquam tempus lectus in turpis lacinia sit amet semper turpis pellentesque. Fusce cursus libero at tortor sollicitudin eu ornare nisi faucibus. Vivamus eget nibh eget nisl mollis dignissim molestie et arcu. Phasellus luctus arcu in leo volutpat nec semper nibh vestibulum. Pellentesque nec sapien laoreet augue pretium feugiat. Vivamus commodo ipsum commodo nulla aliquet eu aliquam massa tristique. Vestibulum dictum dapibus purus, egestas convallis velit tempor quis. Sed a ipsum dui. Suspendisse urna ante, auctor ac hendrerit ut, consectetur nec lacus. Proin egestas, orci at iaculis tincidunt, mauris erat porta ipsum, nec faucibus leo sem et libero. Proin porttitor convallis diam, a sagittis enim porta non. Aenean in auctor diam. Cras interdum purus pretium neque viverra lacinia aliquam mauris venenatis. Sed a nisl purus, nec consequat sem. ";
+				artist = "Rembrandt van Rijn";
+				artistinfo = "Dutch, 1606 - 1669";
+				title = "Portrait of a Gentleman with a Tall Hat and Gloves";
+				dated = "c. 1658/1660";
+				medium = "oil on canvas transferred to canvas";
+				classification = Painting;
+				dimensions = "overall: 99.5 x 82.5 cm (39 3/16 x 32 1/2 in.) framed: 132.1 x 114.3 cm (52 x 45 in.)";
+				credit = "Widener Collection";
+				accessionno = "1942.9.67";
+				digitization = "";
+				imageuse = "Open Access";
+			};
+		},
+		{
+			subgroup = Portrait;
+			group = Rembrandt;
+			identifier = R13914;
+			template = artwork;
+			label = "The Apostle Paul";
+			labelStyle = bold;
+			sublabel = "c. 1657";
+			sublabelStyle = italic;
+			searchText = "Rembrandt Apostle Paul";
+			images = (
+				{
+					credit = "Courtesy NGA";
+					filename = "A13914.jpg";
+					imageDescription = "Full Portrait";
+				},
+			);
+			squareThumbnail = "A13914-Thumb.jpg";
+			details = {
+				description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum diam velit, vel dignissim ligula. Pellentesque non nisl ligula, ac hendrerit eros. Morbi vehicula mi at massa vestibulum vel egestas neque sagittis. Aliquam tempus lectus in turpis lacinia sit amet semper turpis pellentesque. Fusce cursus libero at tortor sollicitudin eu ornare nisi faucibus. Vivamus eget nibh eget nisl mollis dignissim molestie et arcu. Phasellus luctus arcu in leo volutpat nec semper nibh vestibulum. Pellentesque nec sapien laoreet augue pretium feugiat. Vivamus commodo ipsum commodo nulla aliquet eu aliquam massa tristique. Vestibulum dictum dapibus purus, egestas convallis velit tempor quis. Sed a ipsum dui. Suspendisse urna ante, auctor ac hendrerit ut, consectetur nec lacus. Proin egestas, orci at iaculis tincidunt, mauris erat porta ipsum, nec faucibus leo sem et libero. Proin porttitor convallis diam, a sagittis enim porta non. Aenean in auctor diam. Cras interdum purus pretium neque viverra lacinia aliquam mauris venenatis. Sed a nisl purus, nec consequat sem. ";
+				artist = "Rembrandt van Rijn (and Workshop?)";
+				artistinfo = "Dutch, 1606 - 1669";
+				title = "The Apostle Paul";
+				dated = "c. 1657";
+				medium = " oil on canvas";
+				classification = Painting;
+				dimensions = "overall: 131.5 x 104.4 cm (51 3/4 x 41 1/8 in.) framed: 177.8 x 150.5 x 13.3 cm (70 x 59 1/4 x 5 1/4 in.)";
+				credit = "Widener Collection";
+				accessionno = "1942.9.59";
+				digitization = " Direct Digital Capture";
+				imageuse = " Open Access";
+			};
+		},
+		{
+			subgroup = Portrait;
+			group = Rembrandt;
+			identifier = R11993;
+			template = artwork;
+			label = "Portrait of a Lady with an Ostrich-Feather Fan,";
+			labelStyle = bold;
+			sublabel = "c. 1657";
+			sublabelStyle = italic;
+			searchText = "Rembrandt Portrait Lady Ostrich Feather Fan";
+			images = (
+				{
+					credit = "Courtesy NGA";
+					filename = "A11993.jpg";
+					imageDescription = "Full Portrait";
+				},
+			);
+			squareThumbnail = "A11993-Thumb.jpg";
+			details = {
+				description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum diam velit, vel dignissim ligula. Pellentesque non nisl ligula, ac hendrerit eros. Morbi vehicula mi at massa vestibulum vel egestas neque sagittis. Aliquam tempus lectus in turpis lacinia sit amet semper turpis pellentesque. Fusce cursus libero at tortor sollicitudin eu ornare nisi faucibus. Vivamus eget nibh eget nisl mollis dignissim molestie et arcu. Phasellus luctus arcu in leo volutpat nec semper nibh vestibulum. Pellentesque nec sapien laoreet augue pretium feugiat. Vivamus commodo ipsum commodo nulla aliquet eu aliquam massa tristique. Vestibulum dictum dapibus purus, egestas convallis velit tempor quis. Sed a ipsum dui. Suspendisse urna ante, auctor ac hendrerit ut, consectetur nec lacus. Proin egestas, orci at iaculis tincidunt, mauris erat porta ipsum, nec faucibus leo sem et libero. Proin porttitor convallis diam, a sagittis enim porta non. Aenean in auctor diam. Cras interdum purus pretium neque viverra lacinia aliquam mauris venenatis. Sed a nisl purus, nec consequat sem. ";
+				artist = "Rembrandt van Rijn";
+				artistinfo = "Dutch, 1606 - 1669";
+				title = "Portrait of a Lady with an Ostrich-Feather Fan";
+				dated = "c. 1658/1660";
+				medium = "oil on canvas transferred to canvas";
+				classification = Painting;
+				dimensions = "overall: 99.5 x 83 cm (39 3/16 x 32 11/16 in.) framed: 131.8 x 115.2 cm (51 7/8 x 45 3/8 in.)";
+				credit = "Widener Collection";
+				accessionno = "1942.9.68";
+				digitization = "Direct Digital Capture";
+				imageuse = " Open Access";
+			};
+		},
+		{
+			subgroup = Drawing;
+			group = Rembrandt;
+			identifier = R0067;
+			template = artwork;
+			label = "A Landscape with Farm Buildings among Trees";
+			labelStyle = bold;
+			sublabel = "c. 1650/1655";
+			sublabelStyle = italic;
+			searchText = "Rembrandt A Landscape with Farm Buildings among Trees";
+			images = (
+				{
+					credit = "Courtesy NGA";
+					filename = "R-20091222-0067.jpg";
+					imageDescription = "Full Portrait";
+				},
+			);
+			squareThumbnail = "R-20091222-0067-thumb.jpg";
+			details = {
+				description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum diam velit, vel dignissim ligula. Pellentesque non nisl ligula, ac hendrerit eros. Morbi vehicula mi at massa vestibulum vel egestas neque sagittis. Aliquam tempus lectus in turpis lacinia sit amet semper turpis pellentesque. Fusce cursus libero at tortor sollicitudin eu ornare nisi faucibus. Vivamus eget nibh eget nisl mollis dignissim molestie et arcu. Phasellus luctus arcu in leo volutpat nec semper nibh vestibulum. Pellentesque nec sapien laoreet augue pretium feugiat. Vivamus commodo ipsum commodo nulla aliquet eu aliquam massa tristique. Vestibulum dictum dapibus purus, egestas convallis velit tempor quis. Sed a ipsum dui. Suspendisse urna ante, auctor ac hendrerit ut, consectetur nec lacus. Proin egestas, orci at iaculis tincidunt, mauris erat porta ipsum, nec faucibus leo sem et libero. Proin porttitor convallis diam, a sagittis enim porta non. Aenean in auctor diam. Cras interdum purus pretium neque viverra lacinia aliquam mauris venenatis. Sed a nisl purus, nec consequat sem. ";
+				artist = "Rembrandt van Rijn";
+				artistinfo = "Dutch, 1606 - 1669";
+				title = "A Landscape with Farm Buildings among Trees";
+				dated = "c. 1650/1655";
+				medium = " pen and brown ink with brown wash on laid paper";
+				classification = Drawing;
+				dimensions = " overall: 6.2 x 16.7 cm (2 7/16 x 6 9/16 in.)";
+				credit = "The Armand Hammer Collection";
+				accessionno = "1991.217.75";
+				digitization = "Rapid Capture";
+				imageuse = "Open Access";
+			};
+		},
+		{
+			subgroup = Portrait;
+			group = Rembrandt;
+			identifier = R15884;
+			template = artwork;
+			label = "Saskia van Uylenburgh, the Wife of the Artist";
+			labelStyle = bold;
+			sublabel = "probably begun 1634/1635 and completed 1638/1640";
+			sublabelStyle = italic;
+			searchText = "Rembrandt Saskia van Uylenburgh the Wife of the Artist";
+			images = (
+				{
+					credit = "Courtesy NGA";
+					filename = "A15884.jpg";
+					imageDescription = "Full Portrait";
+				},
+				{
+					credit = "Courtesy NGA";
+					filename = "A15884-detail.jpg";
+					imageDescription = "Portrait Detail";
+				},
+			);
+			squareThumbnail = "A15884-Thumb.jpg";
+			details = {
+				description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum diam velit, vel dignissim ligula. Pellentesque non nisl ligula, ac hendrerit eros. Morbi vehicula mi at massa vestibulum vel egestas neque sagittis. Aliquam tempus lectus in turpis lacinia sit amet semper turpis pellentesque. Fusce cursus libero at tortor sollicitudin eu ornare nisi faucibus. Vivamus eget nibh eget nisl mollis dignissim molestie et arcu. Phasellus luctus arcu in leo volutpat nec semper nibh vestibulum. Pellentesque nec sapien laoreet augue pretium feugiat. Vivamus commodo ipsum commodo nulla aliquet eu aliquam massa tristique. Vestibulum dictum dapibus purus, egestas convallis velit tempor quis. Sed a ipsum dui. Suspendisse urna ante, auctor ac hendrerit ut, consectetur nec lacus. Proin egestas, orci at iaculis tincidunt, mauris erat porta ipsum, nec faucibus leo sem et libero. Proin porttitor convallis diam, a sagittis enim porta non. Aenean in auctor diam. Cras interdum purus pretium neque viverra lacinia aliquam mauris venenatis. Sed a nisl purus, nec consequat sem. ";
+				artist = "Rembrandt van Rijn";
+				artistinfo = " Dutch, 1606 - 1669";
+				title = "Saskia van Uylenburgh, the Wife of the Artist";
+				dated = "probably begun 1634/1635 and completed 1638/1640";
+				medium = "oil on panel";
+				classification = Painting;
+				dimensions = "overall: 60.5 x 49 cm (23 13/16 x 19 5/16 in.) framed: 88.6 x 75.6 x 11.4 cm (34 7/8 x 29 3/4 x 4 1/2 in.)";
+				credit = "Widener Collection";
+				accessionno = "1942.9.71";
+				digitization = "Direct Digital Capture";
+				imageuse = "Open Access";
+			};
+		},
+		{
+			subgroup = Print;
+			group = Rembrandt;
+			identifier = R0014;
+			template = artwork;
+			label = "Self-Portrait with Raised Sabre";
+			labelStyle = bold;
+			sublabel = 1634;
+			sublabelStyle = italic;
+			searchText = "Rembrandt Self-Portrait Raised Sabre";
+			images = (
+				{
+					credit = "Courtesy NGA";
+					filename = "R-20111125-0014.jpg";
+					imageDescription = "Self Portrait";
+				},
+			);
+			squareThumbnail = "R-20111125-0014-thumb.jpg";
+			details = {
+				description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum diam velit, vel dignissim ligula. Pellentesque non nisl ligula, ac hendrerit eros. Morbi vehicula mi at massa vestibulum vel egestas neque sagittis. Aliquam tempus lectus in turpis lacinia sit amet semper turpis pellentesque. Fusce cursus libero at tortor sollicitudin eu ornare nisi faucibus. Vivamus eget nibh eget nisl mollis dignissim molestie et arcu. Phasellus luctus arcu in leo volutpat nec semper nibh vestibulum. Pellentesque nec sapien laoreet augue pretium feugiat. Vivamus commodo ipsum commodo nulla aliquet eu aliquam massa tristique. Vestibulum dictum dapibus purus, egestas convallis velit tempor quis. Sed a ipsum dui. Suspendisse urna ante, auctor ac hendrerit ut, consectetur nec lacus. Proin egestas, orci at iaculis tincidunt, mauris erat porta ipsum, nec faucibus leo sem et libero. Proin porttitor convallis diam, a sagittis enim porta non. Aenean in auctor diam. Cras interdum purus pretium neque viverra lacinia aliquam mauris venenatis. Sed a nisl purus, nec consequat sem. ";
+				artist = "Rembrandt van Rijn";
+				artistinfo = "Dutch, 1606 - 1669";
+				title = "Self-Portrait with Raised Sabre";
+				dated = 1634;
+				medium = "etching with touches of drypoint";
+				classification = Print;
+				dimensions = "sheet (trimmed within plate mark): 12.2 x 9.9 cm (4 13/16 x 3 7/8 in.)";
+				credit = "Rosenwald Collection";
+				accessionno = "1943.3.7257";
+				digitization = "";
+				imageuse = "Open Access";
+			};
+		},
+		{
+			subgroup = Portrait;
+			group = Rembrandt;
+			identifier = R15589;
+			template = artwork;
+			label = "The Philosopher";
+			labelStyle = bold;
+			sublabel = "c. 1653";
+			sublabelStyle = italic;
+			searchText = "Rembrandt The Philosopher";
+			images = (
+				{
+					credit = "Courtesy NGA";
+					filename = "A15589.jpg";
+					imageDescription = "Full Portrait";
+				},
+			);
+			squareThumbnail = "a15589-thumb.jpg";
+			details = {
+				description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum diam velit, vel dignissim ligula. Pellentesque non nisl ligula, ac hendrerit eros. Morbi vehicula mi at massa vestibulum vel egestas neque sagittis. Aliquam tempus lectus in turpis lacinia sit amet semper turpis pellentesque. Fusce cursus libero at tortor sollicitudin eu ornare nisi faucibus. Vivamus eget nibh eget nisl mollis dignissim molestie et arcu. Phasellus luctus arcu in leo volutpat nec semper nibh vestibulum. Pellentesque nec sapien laoreet augue pretium feugiat. Vivamus commodo ipsum commodo nulla aliquet eu aliquam massa tristique. Vestibulum dictum dapibus purus, egestas convallis velit tempor quis. Sed a ipsum dui. Suspendisse urna ante, auctor ac hendrerit ut, consectetur nec lacus. Proin egestas, orci at iaculis tincidunt, mauris erat porta ipsum, nec faucibus leo sem et libero. Proin porttitor convallis diam, a sagittis enim porta non. Aenean in auctor diam. Cras interdum purus pretium neque viverra lacinia aliquam mauris venenatis. Sed a nisl purus, nec consequat sem. ";
+				artist = "Rembrandt Workshop (Possibly Willem Drost)";
+				artistinfo = "";
+				title = "The Philosopher";
+				dated = "c. 1653";
+				medium = "oil on panel";
+				classification = Painting;
+				dimensions = "overall: 61.5 x 49.5 cm (24 3/16 x 19 1/2 in.) framed: 105.4 x 92.4 x 9.2 cm (41 1/2 x 36 3/8 x 3 5/8 in.)";
+				credit = "Widener Collection";
+				accessionno = "1942.9.66";
+				digitization = "Direct Digital Capture";
+				imageuse = "Open Access";
+			};
+		},
+		{
+			subgroup = Dutch;
+			group = "Still Life";
+			identifier = S11777;
+			template = artwork;
+			label = "Still Life with Fruit, Fish, and a Nest";
+			labelStyle = bold;
+			sublabel = "Abraham Mignon c. 1675";
+			sublabelStyle = italic;
+			searchText = "Abraham Mignon Fruit Fish Nest ";
+			images = (
+				{
+					credit = "Courtesy NGA";
+					filename = "A11777.jpg";
+					imageDescription = "Full Image";
+				},
+				{
+					credit = "Courtesy NGA";
+					filename = "A11777-detail.jpg";
+					imageDescription = Detail;
+				},
+			);
+			squareThumbnail = "a11777-thumb.jpg";
+			details = {
+				description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum diam velit, vel dignissim ligula. Pellentesque non nisl ligula, ac hendrerit eros. Morbi vehicula mi at massa vestibulum vel egestas neque sagittis. Aliquam tempus lectus in turpis lacinia sit amet semper turpis pellentesque. Fusce cursus libero at tortor sollicitudin eu ornare nisi faucibus. Vivamus eget nibh eget nisl mollis dignissim molestie et arcu. Phasellus luctus arcu in leo volutpat nec semper nibh vestibulum. Pellentesque nec sapien laoreet augue pretium feugiat. Vivamus commodo ipsum commodo nulla aliquet eu aliquam massa tristique. Vestibulum dictum dapibus purus, egestas convallis velit tempor quis. Sed a ipsum dui. Suspendisse urna ante, auctor ac hendrerit ut, consectetur nec lacus. Proin egestas, orci at iaculis tincidunt, mauris erat porta ipsum, nec faucibus leo sem et libero. Proin porttitor convallis diam, a sagittis enim porta non. Aenean in auctor diam. Cras interdum purus pretium neque viverra lacinia aliquam mauris venenatis. Sed a nisl purus, nec consequat sem. ";
+				artist = "Abraham Mignon";
+				artistinfo = "German, 1640 - 1679";
+				title = "Still Life with Fruit, Fish, and a Nest";
+				dated = "c. 1675";
+				medium = "oil on canvas";
+				classification = Painting;
+				dimensions = "overall: 94 x 73.5 cm (37 x 28 15/16 in.) framed: 117.5 x 98.4 x 5.1 cm (46 1/4 x 38 3/4 x 2 in.)";
+				credit = "Gift of Mr. and Mrs. H. John Heinz III";
+				accessionno = "1989.23.1";
+				digitization = "";
+				imageuse = "Open Access";
+			};
+		},
+		{
+			subgroup = Dutch;
+			group = "Still Life";
+			identifier = S16418;
+			template = artwork;
+			label = "Still Life with Fruit";
+			labelStyle = bold;
+			sublabel = "Jacob van Walscapelle 1675";
+			sublabelStyle = italic;
+			searchText = "Jacob van Walscapelle Fruit Still Life";
+			images = (
+				{
+					credit = "Courtesy NGA";
+					filename = "A16418.jpg";
+					imageDescription = "Full Image";
+				},
+			);
+			squareThumbnail = "a16418-thumb.jpg";
+			details = {
+				description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum diam velit, vel dignissim ligula. Pellentesque non nisl ligula, ac hendrerit eros. Morbi vehicula mi at massa vestibulum vel egestas neque sagittis. Aliquam tempus lectus in turpis lacinia sit amet semper turpis pellentesque. Fusce cursus libero at tortor sollicitudin eu ornare nisi faucibus. Vivamus eget nibh eget nisl mollis dignissim molestie et arcu. Phasellus luctus arcu in leo volutpat nec semper nibh vestibulum. Pellentesque nec sapien laoreet augue pretium feugiat. Vivamus commodo ipsum commodo nulla aliquet eu aliquam massa tristique. Vestibulum dictum dapibus purus, egestas convallis velit tempor quis. Sed a ipsum dui. Suspendisse urna ante, auctor ac hendrerit ut, consectetur nec lacus. Proin egestas, orci at iaculis tincidunt, mauris erat porta ipsum, nec faucibus leo sem et libero. Proin porttitor convallis diam, a sagittis enim porta non. Aenean in auctor diam. Cras interdum purus pretium neque viverra lacinia aliquam mauris venenatis. Sed a nisl purus, nec consequat sem. ";
+				artist = "Jacob van Walscapelle";
+				artistinfo = "Dutch, 1644 - 1727";
+				title = "Still Life with Fruit";
+				dated = 1675;
+				medium = "oil on panel";
+				classification = Painting;
+				dimensions = "overall: 40 x 34.7 cm (15 3/4 x 13 11/16 in.) framed: 58.7 x 53 x 5.7 cm (23 1/8 x 20 7/8 x 2 1/4 in.)";
+				credit = "Juliet and Lee Folger/The Folger Fund";
+				accessionno = "2001.71.1";
+				digitization = "Direct Digital Capture";
+				imageuse = "Open Access";
+			};
+		},
+		{
+			subgroup = Dutch;
+			group = "Still Life";
+			identifier = S16296;
+			template = artwork;
+			label = "Still Life with Flowers and Fruit";
+			labelStyle = bold;
+			sublabel = "Jan van Huysum, c. 1715";
+			sublabelStyle = italic;
+			searchText = "Jan van Huysum Still Life with Flowers and Fruit ";
+			images = (
+				{
+					credit = "Courtesy NGA";
+					filename = "A16296.jpg";
+					imageDescription = "Full Image";
+				},
+				{
+					credit = "Courtesy NGA";
+					filename = "A16296-detail-1.jpg";
+					imageDescription = Detail;
+				},
+				{
+					credit = "Courtesy NGA";
+					filename = "A16296-detail-2.jpg";
+					imageDescription = Detail;
+				},
+			);
+			squareThumbnail = "a16296-thumb.jpg";
+			details = {
+				description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum diam velit, vel dignissim ligula. Pellentesque non nisl ligula, ac hendrerit eros. Morbi vehicula mi at massa vestibulum vel egestas neque sagittis. Aliquam tempus lectus in turpis lacinia sit amet semper turpis pellentesque. Fusce cursus libero at tortor sollicitudin eu ornare nisi faucibus. Vivamus eget nibh eget nisl mollis dignissim molestie et arcu. Phasellus luctus arcu in leo volutpat nec semper nibh vestibulum. Pellentesque nec sapien laoreet augue pretium feugiat. Vivamus commodo ipsum commodo nulla aliquet eu aliquam massa tristique. Vestibulum dictum dapibus purus, egestas convallis velit tempor quis. Sed a ipsum dui. Suspendisse urna ante, auctor ac hendrerit ut, consectetur nec lacus. Proin egestas, orci at iaculis tincidunt, mauris erat porta ipsum, nec faucibus leo sem et libero. Proin porttitor convallis diam, a sagittis enim porta non. Aenean in auctor diam. Cras interdum purus pretium neque viverra lacinia aliquam mauris venenatis. Sed a nisl purus, nec consequat sem. ";
+				artist = "Jan van Huysum";
+				artistinfo = "Dutch, 1682 - 1749";
+				title = "Still Life with Flowers and Fruit";
+				dated = "c. 1715";
+				medium = "oil on panel";
+				classification = Painting;
+				dimensions = "overall: 78.7 x 61.3 cm (31 x 24 1/8 in.) framed: 104.1 x 86.4 x 7.6 cm (41 x 34 x 3 in.)";
+				credit = "Patrons' Permanent Fund and Gift of Philip and Lizanne Cunningham";
+				accessionno = "1996.80.1";
+				digitization = "Direct Digital Capture";
+				imageuse = "Open Access";
+			};
+		},
+	);
+	versionID = "1.3";
+}

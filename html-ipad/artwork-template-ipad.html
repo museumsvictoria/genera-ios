@@ -1,0 +1,31 @@
+<!doctype html>
+<head>
+<link href="artwork-style.css" rel="stylesheet" type="text/css">
+<script>
+/* Activate Widget Flip */
+	function toggleFlip(objectid) {
+		currentobj = document.getElementById(objectid);
+ 		if (currentobj.className.indexOf("flip") != -1) {
+			currentobj.className = currentobj.className.replace( " flip", "");
+		} else {
+		currentobj.className += " flip";
+		}
+	}
+</script>
+</head>
+<body>
+
+	<div class="leftcolumn">
+		<header>
+			<h1><%label%></h1>
+			<h2><%sublabel%></h2>
+		</header>
+
+	</div><!-- end .leftcolumn -->
+	
+	<div class="rightcolumn">
+
+	</div><!-- end .rightcolumn -->
+	
+</body>
+</html>

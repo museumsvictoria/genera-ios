@@ -234,11 +234,11 @@
     //	NSLog(@"searchTerms Count:%d", [searchTerms count]);
 	
     
-    [searchString appendString: [NSString stringWithFormat:@"(searchText MATCHES[c] '(.* )?%@.*'", [searchTerms objectAtIndex:0]]];
+    [searchString appendString: [NSString stringWithFormat:@"(searchText MATCHES[cd] '(.* )?%@.*'", [searchTerms objectAtIndex:0]]];
 	if ([searchTerms count] > 1) {
 		//build or statements
 		for (int i = 1; i < [searchTerms count]; i++) {
-				[searchString appendString: [NSString stringWithFormat:@" AND searchText MATCHES[c] '(.* )?%@.*'", [searchTerms objectAtIndex:i]]];
+				[searchString appendString: [NSString stringWithFormat:@" AND searchText MATCHES[cd] '(.* )?%@.*'", [searchTerms objectAtIndex:i]]];
 		}
 	}
 	

@@ -5,7 +5,9 @@ The Genera Project Code
 
 The Code for the Genera Project has been released by Museum Victoria (http://museumvictoira.com.au/) under an MIT Style Licence (See Below).
 
-The code is hosted at http://code.google.com/p/the-genera-project/
+The code was previously hosted at http://code.google.com/p/the-genera-project/
+
+The code is now being hosted at GitHub at http://github.com/museumvictoria/genera-ios
 
 The Genera Project is an variation of the Field Guide Project, also released by Museum Victoria.
 

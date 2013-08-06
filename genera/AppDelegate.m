@@ -109,7 +109,8 @@
             //display the wait screen
             //initiPhoneLayout gets called when the database build is complete in
 			iPhoneLoaderView = [[iPhoneInitialLoadView alloc] initWithNibName:@"iPhoneInitialLoadView" bundle:nil];
-			[_window addSubview:iPhoneLoaderView.view];
+			//[_window addSubview:iPhoneLoaderView.view];
+            [_window setRootViewController:iPhoneLoaderView];
 		}else{
 			[self initiPhoneLayout];
 		}
@@ -123,9 +124,10 @@
  //       UINavigationController *detailNavigationController = [[[UINavigationController alloc] initWithRootViewController:detailViewController] autorelease];
     	
         self.splitViewController = [[[UISplitViewController alloc] init] autorelease];
-        self.splitViewController.delegate = detailViewController;
+
        // self.splitViewController.viewControllers = [NSArray arrayWithObjects:masterNavigationController, detailNavigationController, nil];
         self.splitViewController.viewControllers = [NSArray arrayWithObjects:masterNavigationController, detailViewController, nil];
+        self.splitViewController.delegate = detailViewController;      
         self.window.rootViewController = self.splitViewController;
         masterViewController.detailViewController = detailViewController;
         masterViewController.managedObjectContext = self.managedObjectContext;
@@ -141,7 +143,7 @@
 		else {
 			masterViewController.detailViewController.orientationLock = NO;
 		}
-        
+
         
     }
     [self.window makeKeyAndVisible];
@@ -179,7 +181,8 @@
 	NSArray *tabBarVCArray = [NSArray arrayWithObjects:groupNavigationController,aToZNavController,searchNavController,aboutVC, nil];
 	tabBarController.viewControllers = tabBarVCArray;
 	NSLog(@"In Tab View Controller");
-	[_window addSubview:tabBarController.view];	
+	//[_window addSubview:tabBarController.view];
+    [_window setRootViewController:tabBarController];
 	[aboutVC release];
 	[customSearchViewController release];
 	[searchNavController release];
@@ -338,7 +341,7 @@
                     NSString *tabName = [tmpTemplateTab objectForKey:@"tabName"];
                     
                    // if (tabName!=@"audio"&&tabName!=@"details"&&tabName!=@"images") {
-                    if (tabName!=@"audio"&&tabName!=@"images") {    
+                    if (![tabName isEqual:@"audio"]&& ![tabName isEqual:@"images"]) {
                         newTemplateTab =  [NSEntityDescription insertNewObjectForEntityForName:@"TemplateTab" inManagedObjectContext:currentContext]; 
                         newTemplateTab.tabName = tabName;
                         newTemplateTab.tabLabel= [tmpTemplateTab objectForKey:@"tabLabel"];
@@ -347,13 +350,13 @@
                         
                     }
                     else{ //audio, details and images tab definitions already exist
-                            if (tabName == @"audio") {
+                            if ([tabName isEqual: @"audio"]) {
                                 newTemplateTab = audioTab;
                             }
                       /*      if (tabName == @"details") {
                                 newTemplateTab = detailsTab;
                             } */    
-                            if (tabName == @"images") {
+                            if ([tabName isEqual: @"images"]) {
                                 newTemplateTab = imageTab;
                             }
                     }
@@ -617,9 +620,15 @@
     
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"genera.sqlite"];
     
+    
+	NSDictionary *options = @{
+                           NSMigratePersistentStoresAutomaticallyOption: @YES,
+                           NSInferMappingModelAutomaticallyOption: @YES
+                           };
+    
     NSError *error = nil;
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error])
+    if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error])
     {
         /*
          Replace this implementation with code to handle the error appropriately.

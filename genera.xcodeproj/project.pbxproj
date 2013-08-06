@@ -41,6 +41,7 @@
 		A4118AE314BC3D010061DC1E /* ViewImage.png in Resources */ = {isa = PBXBuildFile; fileRef = A4118AD814BC3D010061DC1E /* ViewImage.png */; };
 		A4118AE414BC3D010061DC1E /* ViewImageText.png in Resources */ = {isa = PBXBuildFile; fileRef = A4118AD914BC3D010061DC1E /* ViewImageText.png */; };
 		A4118AE514BC3D010061DC1E /* ViewText.png in Resources */ = {isa = PBXBuildFile; fileRef = A4118ADA14BC3D010061DC1E /* ViewText.png */; };
+		A43B6E7817A891A4000E18EE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A43B6E7717A891A4000E18EE /* Default-568h@2x.png */; };
 		A442905B14C4331D00FE575A /* iphoneAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A442905914C4331D00FE575A /* iphoneAboutViewController.m */; };
 		A442905C14C4331D00FE575A /* iphoneAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A442905A14C4331D00FE575A /* iphoneAboutViewController.xib */; };
 		A442906114C4437400FE575A /* iPhoneDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A442905F14C4437400FE575A /* iPhoneDetailViewController.m */; };
@@ -240,12 +241,14 @@
 		A4118AD814BC3D010061DC1E /* ViewImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ViewImage.png; sourceTree = "<group>"; };
 		A4118AD914BC3D010061DC1E /* ViewImageText.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ViewImageText.png; sourceTree = "<group>"; };
 		A4118ADA14BC3D010061DC1E /* ViewText.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ViewText.png; sourceTree = "<group>"; };
+		A43B6E7717A891A4000E18EE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A442905814C4331D00FE575A /* iphoneAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iphoneAboutViewController.h; sourceTree = "<group>"; };
 		A442905914C4331D00FE575A /* iphoneAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iphoneAboutViewController.m; sourceTree = "<group>"; };
 		A442905A14C4331D00FE575A /* iphoneAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iphoneAboutViewController.xib; sourceTree = "<group>"; };
 		A442905E14C4437400FE575A /* iPhoneDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = iPhoneDetailViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		A442905F14C4437400FE575A /* iPhoneDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = iPhoneDetailViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A442906014C4437400FE575A /* iPhoneDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iPhoneDetailViewController.xib; sourceTree = "<group>"; };
+		A443143017A74D4C00B588A2 /* genera v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "genera v2.xcdatamodel"; sourceTree = "<group>"; };
 		A449D02814BC558C00A5A37E /* ImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScrollView.h; sourceTree = "<group>"; };
 		A449D02914BC558C00A5A37E /* ImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageScrollView.m; sourceTree = "<group>"; };
 		A45AF1B014C18EE6009966A6 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
@@ -718,6 +721,7 @@
 		A4D3D6CE14B303EE007827C2 = {
 			isa = PBXGroup;
 			children = (
+				A43B6E7717A891A4000E18EE /* Default-568h@2x.png */,
 				A4096406152EA53A00B1A462 /* README */,
 				A495AF71152470DF001A6D4C /* NGA Images */,
 				6163E59314D69F77001AF796 /* CustomSearchViewController.h */,
@@ -862,7 +866,7 @@
 		A4D3D6D014B303EE007827C2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Digital Renaissance Pty Ltd";
 			};
 			buildConfigurationList = A4D3D6D314B303EE007827C2 /* Build configuration list for PBXProject "genera" */;
@@ -1049,6 +1053,7 @@
 				A40963FF152EA23D00B1A462 /* iphone-artwork-details.html in Resources */,
 				A4096401152EA29A00B1A462 /* iphone-artwork-style.css in Resources */,
 				A4096408152EA55B00B1A462 /* README.TXT in Resources */,
+				A43B6E7817A891A4000E18EE /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1136,6 +1141,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1149,6 +1158,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
@@ -1161,12 +1171,17 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -1182,7 +1197,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "genera/genera-Prefix.pch";
 				INFOPLIST_FILE = "genera/genera-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1194,7 +1209,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "genera/genera-Prefix.pch";
 				INFOPLIST_FILE = "genera/genera-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1227,6 +1242,7 @@
 		A4D3D6F114B303EE007827C2 /* genera.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				A443143017A74D4C00B588A2 /* genera v2.xcdatamodel */,
 				A4D3D6F214B303EE007827C2 /* genera.xcdatamodel */,
 			);
 			currentVersion = A4D3D6F214B303EE007827C2 /* genera.xcdatamodel */;

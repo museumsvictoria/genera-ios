@@ -109,18 +109,21 @@
     _detailToolbar.tintColor = [VariableStore sharedInstance].toolbarTint;
 	_titleBarLabel.text = _detailSpeci.label;
 	
-	//if portrait mode and first button is popover
-	if (self.interfaceOrientation== UIInterfaceOrientationPortraitUpsideDown || self.interfaceOrientation == UIInterfaceOrientationPortrait)  {
+	//if portrait mode and first button is popover && _detailSpeci is not null....
+    if (_detailSpeci != NULL){
+        if (self.interfaceOrientation== UIInterfaceOrientationPortraitUpsideDown || self.interfaceOrientation == UIInterfaceOrientationPortrait)  {
 		
-		UIBarButtonItem *barButtonItem = [[_detailToolbar items] objectAtIndex:0];
-		if ([_detailSpeci.group.label length] >13) {
-			_currentGroupLabel = [_detailSpeci.group.label stringByReplacingCharactersInRange:NSMakeRange(10, [_detailSpeci.group.label length]-10) withString:@"..."];
-		}else{
+            UIBarButtonItem *barButtonItem = [[_detailToolbar items] objectAtIndex:0];
+            if ([_detailSpeci.group.label length] >13) {
+                _currentGroupLabel = [_detailSpeci.group.label stringByReplacingCharactersInRange:NSMakeRange(10, [_detailSpeci.group.label length]-10) withString:@"..."];
+            }else{
 			
-           _currentGroupLabel  = _detailSpeci.group.label;
-		}
+                _currentGroupLabel  = _detailSpeci.group.label;
+            }
+        
         barButtonItem.title = _currentGroupLabel;
-	}
+        }
+    }
 
 	
 	
@@ -131,7 +134,7 @@
 	//imagePagingControl.currentPage = 0;
     
 	NSLog(@"Before Image Controller Init");
-    NSArray *tmpImageArray = [_detailSpeci.images allObjects];
+    NSArray *tmpImageArray = [_detailSpeci sortedImages];
 	[_imageScrollView newImageSet:tmpImageArray];
 	
 	//Set Image Credit to First Page - don't think this is needed
@@ -182,7 +185,7 @@
 	if ([_detailSpeci.audios count] > 0){
 		_audioPopoverButton.enabled = YES;	
 		
-		_audioPopoverViewController.audioFilesArray = (NSArray *)[_detailSpeci.audios allObjects];
+		_audioPopoverViewController.audioFilesArray = (NSArray *)[_detailSpeci sortedAudio];
 	}else {
 		_audioPopoverButton.enabled = NO;
 
@@ -613,13 +616,14 @@
 - (BOOL)splitViewController:(UISplitViewController *)svc shouldHideViewController:(UIViewController *)vc inOrientation:(UIInterfaceOrientation)orientation
 
 {
-    
-    if (UIInterfaceOrientationIsLandscape(orientation)) {
-        return NO;
-    }else{
+  // 30/07/2013 Changed the default behavior to always hide view controller.
+    //
+  //  if (UIInterfaceOrientationIsLandscape(orientation)) {
+  //      return NO;
+ //   }else{
         
         return YES;
-    }
+ //   }
     
 }
 

@@ -21,4 +21,12 @@
 @dynamic order;
 @dynamic object;
 
+
+- (NSComparisonResult)compareOrder:(Image *)i
+{
+	NSLog(@"inCompare");
+    return [self.order compare:i.order];
+}
+
+
 @end

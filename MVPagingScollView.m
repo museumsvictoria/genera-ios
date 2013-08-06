@@ -367,12 +367,17 @@
     [super didReceiveMemoryWarning];
     
     // Release any cached data, images, etc. that aren't in use.
+    self.delegate = nil;
+	self.images = nil;
+	self.scrollViewImageCredit = nil;
+	self.pagingScrollView = nil;
+	self.pageControl = nil;
 }
 
 
 
 
-
+/*
 - (void)viewDidUnload {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -386,7 +391,7 @@
 	//currentPages = nil;
 	//queuedPages = nil;
 }
-
+*/
 
 - (void)dealloc {
 	[pagingScrollView release];

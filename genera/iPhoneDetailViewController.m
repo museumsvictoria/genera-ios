@@ -69,7 +69,7 @@
 	[_imageView insertSubview:pagingScrollView.view atIndex:0];
 	pagingScrollView.view.frame = imageViewFrame;
 	pagingScrollView.view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;	
-	[pagingScrollView newImageSet:[_detailSpeci.images allObjects]];  
+	[pagingScrollView newImageSet:[_detailSpeci sortedImages]];
 	pagingScrollView.delegate = self;
 	
 	
@@ -261,7 +261,7 @@
 		//audioView.enabled = YES;
 		_audioTab.enabled = YES;
 		audioList = [[AudioListViewController alloc] initWithNibName:@"AudioListViewController" bundle:nil];
-		audioList.audioFilesArray = (NSArray *)[_detailSpeci.audios allObjects];
+		audioList.audioFilesArray = (NSArray *)[_detailSpeci sortedAudio];
 	}else {
 		//audioView.enabled = NO;
 		_audioTab.enabled = NO;
@@ -348,6 +348,8 @@
 	return YES;
 }
 -(IBAction)toggleInfo:(id)sender{}
+
+
 -(void) htmlTemplate:(NSMutableString *)templateString keyString:(NSString *)stringToReplace replaceWith:(NSString *)replacementString{
     
     if (replacementString != nil && [replacementString length] > 0) {

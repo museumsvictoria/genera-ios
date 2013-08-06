@@ -22,4 +22,6 @@
 @property (nonatomic, retain) NSNumber * order;
 @property (nonatomic, retain) Speci *object;
 
+- (NSComparisonResult) compareOrder:(Image *)i;
+
 @end

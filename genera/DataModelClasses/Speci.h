@@ -41,4 +41,8 @@
 - (void)removeImagesObject:(Image *)value;
 - (void)addImages:(NSSet *)values;
 - (void)removeImages:(NSSet *)values;
+
+- (NSArray *)sortedImages;
+- (NSArray *)sortedAudio;
+
 @end

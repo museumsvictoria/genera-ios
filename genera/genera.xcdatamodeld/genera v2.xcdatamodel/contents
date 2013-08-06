@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11D50d" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Audio" representedClassName="Audio" syncable="YES">
+        <attribute name="audioDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="credit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filename" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="object" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Speci" inverseName="audios" inverseEntity="Speci" syncable="YES"/>
+    </entity>
+    <entity name="DataVersion" representedClassName="DataVersion" syncable="YES">
+        <attribute name="versionID" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Group" representedClassName="Group" syncable="YES">
+        <attribute name="highlightedImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="standardImage" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="objects" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Speci" inverseName="group" inverseEntity="Speci" syncable="YES"/>
+    </entity>
+    <entity name="Image" representedClassName="Image" syncable="YES">
+        <attribute name="credit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filename" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="object" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Speci" inverseName="images" inverseEntity="Speci" syncable="YES"/>
+    </entity>
+    <entity name="Speci" representedClassName="Speci" syncable="YES">
+        <attribute name="details" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="labelStyle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="searchText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="squareThumbnail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subgroup" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sublabel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sublabelStyle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="audios" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Audio" inverseName="object" inverseEntity="Audio" syncable="YES"/>
+        <relationship name="group" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Group" inverseName="objects" inverseEntity="Group" syncable="YES"/>
+        <relationship name="images" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Image" inverseName="object" inverseEntity="Image" syncable="YES"/>
+        <relationship name="template" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Template" inverseName="objects" inverseEntity="Template" syncable="YES"/>
+    </entity>
+    <entity name="Template" representedClassName="Template" syncable="YES">
+        <attribute name="tabletTemplate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="templateName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="objects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Speci" inverseName="template" inverseEntity="Speci" syncable="YES"/>
+        <relationship name="tabFive" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="TemplateTab" inverseName="fifthTabs" inverseEntity="TemplateTab" syncable="YES"/>
+        <relationship name="tabFour" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="TemplateTab" inverseName="fourthTabs" inverseEntity="TemplateTab" syncable="YES"/>
+        <relationship name="tabOne" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="TemplateTab" inverseName="firstTabs" inverseEntity="TemplateTab" syncable="YES"/>
+        <relationship name="tabThree" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="TemplateTab" inverseName="thirdTabs" inverseEntity="TemplateTab" syncable="YES"/>
+        <relationship name="tabTwo" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="TemplateTab" inverseName="secondTabs" inverseEntity="TemplateTab" syncable="YES"/>
+    </entity>
+    <entity name="TemplateTab" representedClassName="TemplateTab" syncable="YES">
+        <attribute name="tabIcon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tabLabel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tabName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tabTemplate" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="fifthTabs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Template" inverseName="tabFive" inverseEntity="Template" syncable="YES"/>
+        <relationship name="firstTabs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Template" inverseName="tabOne" inverseEntity="Template" syncable="YES"/>
+        <relationship name="fourthTabs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Template" inverseName="tabFour" inverseEntity="Template" syncable="YES"/>
+        <relationship name="secondTabs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Template" inverseName="tabTwo" inverseEntity="Template" syncable="YES"/>
+        <relationship name="thirdTabs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Template" inverseName="tabThree" inverseEntity="Template" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Audio" positionX="-191" positionY="81" width="128" height="120"/>
+        <element name="DataVersion" positionX="160" positionY="192" width="128" height="60"/>
+        <element name="Group" positionX="-522" positionY="90" width="128" height="120"/>
+        <element name="Image" positionX="-119" positionY="249" width="128" height="120"/>
+        <element name="Speci" positionX="-344" positionY="189" width="128" height="240"/>
+        <element name="Template" positionX="-155" positionY="432" width="128" height="165"/>
+        <element name="TemplateTab" positionX="27" positionY="432" width="128" height="180"/>
+    </elements>
+</model>

@@ -32,4 +32,29 @@
 @dynamic images;
 @dynamic template;
 
+// 30/7/2013 - Added Sorted Images and Audio
+-(NSArray *) sortedImages {
+
+	NSMutableArray *myImages = [NSMutableArray arrayWithCapacity:1];
+	[myImages addObjectsFromArray:[[self images] allObjects]]; //Get random array
+	if ([myImages count] > 1){
+		NSSortDescriptor* desc = [[NSSortDescriptor alloc] initWithKey:@"order" ascending:YES];
+		[myImages sortUsingDescriptors:[NSArray arrayWithObject:desc]];
+		[desc release];
+	}
+	return [NSArray arrayWithArray:myImages];
+}
+
+-(NSArray *) sortedAudio {
+
+	NSMutableArray *myAudio = [NSMutableArray arrayWithCapacity:1];
+	[myAudio addObjectsFromArray:[[self audios] allObjects]]; //Get random array
+	if ([myAudio count] > 1){
+		NSSortDescriptor* desc = [[NSSortDescriptor alloc] initWithKey:@"order" ascending:YES];
+		[myAudio sortUsingDescriptors:[NSArray arrayWithObject:desc]];
+		[desc release];
+	}
+	return [NSArray arrayWithArray:myAudio];
+}
+
 @end

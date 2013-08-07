@@ -29,6 +29,7 @@
 #import "AtoZSpeciViewController.h"
 #import "iphoneAboutViewController.h"
 
+NSString * const DidRefreshDatabaseNotificationName = @"FieldGuideDidRefreshDatabase";
 
 @implementation AppDelegate
 
@@ -118,10 +119,10 @@
         
     } else {
         MasterViewController *masterViewController = [[[MasterViewController alloc] initWithNibName:@"MasterViewController_iPad" bundle:nil] autorelease];
+        
         UINavigationController *masterNavigationController = [[[UINavigationController alloc] initWithRootViewController:masterViewController] autorelease];
         
         DetailViewController *detailViewController = [[[DetailViewController alloc] initWithNibName:@"DetailViewController_iPad" bundle:nil] autorelease];
- //       UINavigationController *detailNavigationController = [[[UINavigationController alloc] initWithRootViewController:detailViewController] autorelease];
     	
         self.splitViewController = [[[UISplitViewController alloc] init] autorelease];
 
@@ -479,6 +480,9 @@
     }
     [self performSelectorOnMainThread:@selector(finishedImport) withObject:nil waitUntilDone:NO];
     [pool drain];
+    
+	[NSNotificationCenter.defaultCenter postNotificationName:DidRefreshDatabaseNotificationName
+                                                      object:nil];
 }
 -(void) refreshDatabase{
     

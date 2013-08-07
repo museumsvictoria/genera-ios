@@ -15,7 +15,7 @@
 #import "DetailViewController.h"
 #import "Group.h"
 #import "SpeciListViewController.h"
-
+#import "AppDelegate.h"
 @interface MasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
@@ -64,11 +64,21 @@
 
     UIBarButtonItem *addButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)] autorelease];
     self.navigationItem.rightBarButtonItem = addButton;*/
+    
+        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(refresh) name:DidRefreshDatabaseNotificationName object:nil];
+    
+}
+
+- (void)refresh {
+    [self.fetchedResultsController performFetch:nil];
+    [self.tableView reloadData];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    
+    [NSNotificationCenter.defaultCenter removeObserver:self];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }

@@ -20,6 +20,8 @@
     	UITabBarController *tabBarController;
 }
 
+extern NSString * const DidRefreshDatabaseNotificationName;
+
 @property (strong, nonatomic) UIWindow *window;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;

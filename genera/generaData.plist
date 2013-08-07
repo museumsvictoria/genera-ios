@@ -180,7 +180,7 @@
 					imageDescription = "Full Portrait";
 				},
 			);
-			squareThumbnail = "A11981-Thumb.jpg";
+			squareThumbnail = "A11981-thumb.jpg";
 			details = {
 				description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum diam velit, vel dignissim ligula. Pellentesque non nisl ligula, ac hendrerit eros. Morbi vehicula mi at massa vestibulum vel egestas neque sagittis. Aliquam tempus lectus in turpis lacinia sit amet semper turpis pellentesque. Fusce cursus libero at tortor sollicitudin eu ornare nisi faucibus. Vivamus eget nibh eget nisl mollis dignissim molestie et arcu. Phasellus luctus arcu in leo volutpat nec semper nibh vestibulum. Pellentesque nec sapien laoreet augue pretium feugiat. Vivamus commodo ipsum commodo nulla aliquet eu aliquam massa tristique. Vestibulum dictum dapibus purus, egestas convallis velit tempor quis. Sed a ipsum dui. Suspendisse urna ante, auctor ac hendrerit ut, consectetur nec lacus. Proin egestas, orci at iaculis tincidunt, mauris erat porta ipsum, nec faucibus leo sem et libero. Proin porttitor convallis diam, a sagittis enim porta non. Aenean in auctor diam. Cras interdum purus pretium neque viverra lacinia aliquam mauris venenatis. Sed a nisl purus, nec consequat sem. ";
 				artist = "Rembrandt van Rijn";
@@ -421,7 +421,7 @@
 					imageDescription = Detail;
 				},
 			);
-			squareThumbnail = "a11777-thumb.jpg";
+			squareThumbnail = "A11777-thumb.jpg";
 			details = {
 				description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum diam velit, vel dignissim ligula. Pellentesque non nisl ligula, ac hendrerit eros. Morbi vehicula mi at massa vestibulum vel egestas neque sagittis. Aliquam tempus lectus in turpis lacinia sit amet semper turpis pellentesque. Fusce cursus libero at tortor sollicitudin eu ornare nisi faucibus. Vivamus eget nibh eget nisl mollis dignissim molestie et arcu. Phasellus luctus arcu in leo volutpat nec semper nibh vestibulum. Pellentesque nec sapien laoreet augue pretium feugiat. Vivamus commodo ipsum commodo nulla aliquet eu aliquam massa tristique. Vestibulum dictum dapibus purus, egestas convallis velit tempor quis. Sed a ipsum dui. Suspendisse urna ante, auctor ac hendrerit ut, consectetur nec lacus. Proin egestas, orci at iaculis tincidunt, mauris erat porta ipsum, nec faucibus leo sem et libero. Proin porttitor convallis diam, a sagittis enim porta non. Aenean in auctor diam. Cras interdum purus pretium neque viverra lacinia aliquam mauris venenatis. Sed a nisl purus, nec consequat sem. ";
 				artist = "Abraham Mignon";
@@ -454,7 +454,7 @@
 					imageDescription = "Full Image";
 				},
 			);
-			squareThumbnail = "a16418-thumb.jpg";
+			squareThumbnail = "A16418-thumb.jpg";
 			details = {
 				description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum diam velit, vel dignissim ligula. Pellentesque non nisl ligula, ac hendrerit eros. Morbi vehicula mi at massa vestibulum vel egestas neque sagittis. Aliquam tempus lectus in turpis lacinia sit amet semper turpis pellentesque. Fusce cursus libero at tortor sollicitudin eu ornare nisi faucibus. Vivamus eget nibh eget nisl mollis dignissim molestie et arcu. Phasellus luctus arcu in leo volutpat nec semper nibh vestibulum. Pellentesque nec sapien laoreet augue pretium feugiat. Vivamus commodo ipsum commodo nulla aliquet eu aliquam massa tristique. Vestibulum dictum dapibus purus, egestas convallis velit tempor quis. Sed a ipsum dui. Suspendisse urna ante, auctor ac hendrerit ut, consectetur nec lacus. Proin egestas, orci at iaculis tincidunt, mauris erat porta ipsum, nec faucibus leo sem et libero. Proin porttitor convallis diam, a sagittis enim porta non. Aenean in auctor diam. Cras interdum purus pretium neque viverra lacinia aliquam mauris venenatis. Sed a nisl purus, nec consequat sem. ";
 				artist = "Jacob van Walscapelle";
@@ -497,7 +497,7 @@
 					imageDescription = Detail;
 				},
 			);
-			squareThumbnail = "a16296-thumb.jpg";
+			squareThumbnail = "A16296-thumb.jpg";
 			details = {
 				description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum diam velit, vel dignissim ligula. Pellentesque non nisl ligula, ac hendrerit eros. Morbi vehicula mi at massa vestibulum vel egestas neque sagittis. Aliquam tempus lectus in turpis lacinia sit amet semper turpis pellentesque. Fusce cursus libero at tortor sollicitudin eu ornare nisi faucibus. Vivamus eget nibh eget nisl mollis dignissim molestie et arcu. Phasellus luctus arcu in leo volutpat nec semper nibh vestibulum. Pellentesque nec sapien laoreet augue pretium feugiat. Vivamus commodo ipsum commodo nulla aliquet eu aliquam massa tristique. Vestibulum dictum dapibus purus, egestas convallis velit tempor quis. Sed a ipsum dui. Suspendisse urna ante, auctor ac hendrerit ut, consectetur nec lacus. Proin egestas, orci at iaculis tincidunt, mauris erat porta ipsum, nec faucibus leo sem et libero. Proin porttitor convallis diam, a sagittis enim porta non. Aenean in auctor diam. Cras interdum purus pretium neque viverra lacinia aliquam mauris venenatis. Sed a nisl purus, nec consequat sem. ";
 				artist = "Jan van Huysum";

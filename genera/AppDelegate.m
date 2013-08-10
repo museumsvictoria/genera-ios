@@ -260,13 +260,17 @@ NSString * const DidRefreshDatabaseNotificationName = @"FieldGuideDidRefreshData
 	
 	//Setup pool
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+    
  	NSUInteger totalNumberOfRecords;
 	NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
     [f setNumberStyle:NSNumberFormatterDecimalStyle];
 
 	int currentRecord = 1;
 	NSLog(@"No Database Found");
-	NSManagedObjectContext *currentContext = [[DataFetcher sharedInstance] managedObjectContext];	
+	NSManagedObjectContext *backgroundContext = [[[NSManagedObjectContext alloc] init] autorelease];
+    
+    backgroundContext.persistentStoreCoordinator = [[DataFetcher sharedInstance] persistentStoreCoordinator];
+    
 	NSBundle *thisBundle = [NSBundle bundleForClass:[self class]];
 	NSString *commonArrayPath;
 	if ((commonArrayPath =[thisBundle pathForResource:@"generaData" ofType:@"plist"])) {
@@ -279,21 +283,21 @@ NSString * const DidRefreshDatabaseNotificationName = @"FieldGuideDidRefreshData
             //in animalData, the database will be reloaded everytime the user starts the application. 
             //May make the versionID in animalData purely for human reference.
             NSString *loadingVersionID = [loadValues objectForKey:@"versionID"];
-            DataVersion *loadingDataVersion = [NSEntityDescription insertNewObjectForEntityForName:@"DataVersion" inManagedObjectContext:currentContext];
+            DataVersion *loadingDataVersion = [NSEntityDescription insertNewObjectForEntityForName:@"DataVersion" inManagedObjectContext:backgroundContext];
             loadingDataVersion.versionID = loadingVersionID;
     
             //Create Default Template
-            Template *defaultTemplate = [NSEntityDescription insertNewObjectForEntityForName:@"Template" inManagedObjectContext:currentContext];
+            Template *defaultTemplate = [NSEntityDescription insertNewObjectForEntityForName:@"Template" inManagedObjectContext:backgroundContext];
             defaultTemplate.templateName = @"default";
             defaultTemplate.tabletTemplate = @"iPadTemplate.html";     
             
-            TemplateTab *imageTab =  [NSEntityDescription insertNewObjectForEntityForName:@"TemplateTab" inManagedObjectContext:currentContext]; 
+            TemplateTab *imageTab =  [NSEntityDescription insertNewObjectForEntityForName:@"TemplateTab" inManagedObjectContext:backgroundContext]; 
             imageTab.tabName = @"images";
             imageTab.tabLabel= @"Images";
             imageTab.tabIcon=@"images.png";
           //  [imageTab addFirstTabsObject:defaultTemplate];
             defaultTemplate.tabOne =imageTab;
-            TemplateTab *audioTab =  [NSEntityDescription insertNewObjectForEntityForName:@"TemplateTab" inManagedObjectContext:currentContext];   
+            TemplateTab *audioTab =  [NSEntityDescription insertNewObjectForEntityForName:@"TemplateTab" inManagedObjectContext:backgroundContext];   
             audioTab.tabIcon = @"audio.png";
             audioTab.tabLabel = @"Audio";
             audioTab.tabName = @"audio";
@@ -312,7 +316,7 @@ NSString * const DidRefreshDatabaseNotificationName = @"FieldGuideDidRefreshData
             NSArray *groupArray = [loadValues objectForKey:@"groupList"];
             for (NSDictionary *tmpGroup in groupArray) {
 				
-				Group *testGroup = [NSEntityDescription insertNewObjectForEntityForName:@"Group" inManagedObjectContext:currentContext];
+				Group *testGroup = [NSEntityDescription insertNewObjectForEntityForName:@"Group" inManagedObjectContext:backgroundContext];
 				
 				testGroup.label = [tmpGroup objectForKey:@"label"];
 				testGroup.standardImage = [tmpGroup objectForKey:@"standardImage"];
@@ -330,7 +334,7 @@ NSString * const DidRefreshDatabaseNotificationName = @"FieldGuideDidRefreshData
             
             NSArray *templateArray = [loadValues objectForKey:@"templateList"];
             for (NSDictionary *tmpTemplate in templateArray){
-                Template *newTemplate = [NSEntityDescription insertNewObjectForEntityForName:@"Template" inManagedObjectContext:currentContext];
+                Template *newTemplate = [NSEntityDescription insertNewObjectForEntityForName:@"Template" inManagedObjectContext:backgroundContext];
                 newTemplate.templateName = [tmpTemplate objectForKey:@"templateName"];
                 newTemplate.tabletTemplate = [tmpTemplate objectForKey:@"tabletTemplate"];     
                 
@@ -343,7 +347,7 @@ NSString * const DidRefreshDatabaseNotificationName = @"FieldGuideDidRefreshData
                     
                    // if (tabName!=@"audio"&&tabName!=@"details"&&tabName!=@"images") {
                     if (![tabName isEqual:@"audio"]&& ![tabName isEqual:@"images"]) {
-                        newTemplateTab =  [NSEntityDescription insertNewObjectForEntityForName:@"TemplateTab" inManagedObjectContext:currentContext]; 
+                        newTemplateTab =  [NSEntityDescription insertNewObjectForEntityForName:@"TemplateTab" inManagedObjectContext:backgroundContext]; 
                         newTemplateTab.tabName = tabName;
                         newTemplateTab.tabLabel= [tmpTemplateTab objectForKey:@"tabLabel"];
                         newTemplateTab.tabIcon=   [tmpTemplateTab objectForKey:@"tabIcon"]; 
@@ -401,7 +405,7 @@ NSString * const DidRefreshDatabaseNotificationName = @"FieldGuideDidRefreshData
 				NSLog(@"Before call to Main Thread");
 				[self performSelectorOnMainThread:@selector(updateLoadProgress:) withObject:[NSNumber numberWithInt:currentRecord]  waitUntilDone:NO];
 				NSLog(@"After Selector");
-				Speci *tmpSpeci = [NSEntityDescription insertNewObjectForEntityForName:@"Speci" inManagedObjectContext:currentContext];
+				Speci *tmpSpeci = [NSEntityDescription insertNewObjectForEntityForName:@"Speci" inManagedObjectContext:backgroundContext];
                 tmpSpeci.subgroup = [tmpObjectData objectForKey:@"subgroup"];
                 tmpSpeci.identifier = [tmpObjectData objectForKey:@"identifier"];
                 tmpSpeci.label = [tmpObjectData objectForKey:@"label"];
@@ -416,7 +420,7 @@ NSString * const DidRefreshDatabaseNotificationName = @"FieldGuideDidRefreshData
                 
                 //Add object to Group
                 NSPredicate *groupPredicate = [NSPredicate predicateWithFormat:@"label=%@", [tmpObjectData objectForKey:@"group"]];		
-				NSArray *currentgroup = [[DataFetcher sharedInstance] fetchManagedObjectsForEntity:@"Group" withPredicate:groupPredicate];
+				NSArray *currentgroup = [[DataFetcher sharedInstance] fetchManagedObjectsForEntity:@"Group" withPredicate:groupPredicate inContext:backgroundContext];
 				if ([currentgroup count] > 0) {
 					Group *localGroup = [currentgroup objectAtIndex:0];
 		            [localGroup addObjectsObject:tmpSpeci];
@@ -434,7 +438,7 @@ NSString * const DidRefreshDatabaseNotificationName = @"FieldGuideDidRefreshData
                 {
                     //Get and update template
                     NSPredicate *templatePredicate = [NSPredicate predicateWithFormat:@"templateName=%@", tmpString];		
-                    NSArray *currentTemplate = [[DataFetcher sharedInstance] fetchManagedObjectsForEntity:@"Template" withPredicate:templatePredicate];
+                    NSArray *currentTemplate = [[DataFetcher sharedInstance] fetchManagedObjectsForEntity:@"Template" withPredicate:templatePredicate inContext:backgroundContext];
                     if (currentTemplate.count > 0) {
                         Template *objectTemplate = [currentTemplate objectAtIndex:0];
                         tmpSpeci.template = objectTemplate;
@@ -447,7 +451,7 @@ NSString * const DidRefreshDatabaseNotificationName = @"FieldGuideDidRefreshData
 				int counter = 0;
 				for (NSDictionary *tmpImageData in tmpImageArray){
 					counter +=1;
-					Image *tmpImage = [NSEntityDescription insertNewObjectForEntityForName:@"Image" inManagedObjectContext:currentContext];
+					Image *tmpImage = [NSEntityDescription insertNewObjectForEntityForName:@"Image" inManagedObjectContext:backgroundContext];
 					tmpImage.filename = [tmpImageData objectForKey:@"filename"];
 					tmpImage.credit = [tmpImageData objectForKey:@"credit"];
                     tmpImage.imageDescription  = [tmpImageData objectForKey:@"imageDescription"];
@@ -461,7 +465,7 @@ NSString * const DidRefreshDatabaseNotificationName = @"FieldGuideDidRefreshData
                 counter = 0;
 				for (NSDictionary *tmpAudioData in tmpAudioArray) {
                     counter +=1;
-					Audio *tmpAudio = [NSEntityDescription insertNewObjectForEntityForName:@"Audio" inManagedObjectContext:currentContext];
+					Audio *tmpAudio = [NSEntityDescription insertNewObjectForEntityForName:@"Audio" inManagedObjectContext:backgroundContext];
 					tmpAudio.filename = [tmpAudioData objectForKey:@"filename"];
 					tmpAudio.credit = [tmpAudioData objectForKey:@"credit"];
                     tmpAudio.audioDescription = [tmpAudioData objectForKey:@"audioDescription"];
@@ -474,7 +478,7 @@ NSString * const DidRefreshDatabaseNotificationName = @"FieldGuideDidRefreshData
             
             NSLog(@"About to Save");
 			NSError *saveError;
-            [currentContext save:&saveError];
+            [backgroundContext save:&saveError];
             
         }
     }
